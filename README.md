@@ -24,10 +24,11 @@ A comprehensive Discord bot solution which covers moderation, ticket management 
    
 ## Features
 
-- Comprehensive moderation tools
-- Ticket management system
-- Utility functions
-- ... (Add all the features of your bot here)
+- Moderation commands
+- Ticket/Support system
+- User Management
+- Informational commands
+- Server Backups
 
 ## Troubleshooting
 
