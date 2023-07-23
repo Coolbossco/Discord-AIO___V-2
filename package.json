@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "update": "git branch | git fetch"
+    "update": "git branch && git fetch && git pull"
   },
   "keywords": [],
   "devDependencies": {},
