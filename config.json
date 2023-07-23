@@ -1,6 +1,15 @@
 {
   "prefix": "!",
-  "token": "your-bot-token-goes-here",
+  "token": "your-bot-token-here",
   "commandLogChannel": "your-command-log-channel-id",
-  "moderationLogChannel": "your-moderation-log-channel-id"
+  "moderationLogChannel": "your-moderation-log-channel-id",
+  "ticketManager": {
+    "enabled": true,
+    "parentId": "ticket-category-id",
+    "staffRole": "staff-role-id",
+    "closeParentId": "closed-tickets-category-id",
+    "channelTopic": true,
+    "storage": "./tickets.json",
+    "ticketCache": true
+  }
 }

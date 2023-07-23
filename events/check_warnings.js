@@ -1,22 +1,23 @@
 const fs = require('fs');
 const ms = require('ms');
 const config = require('../config.json');
-const client = new Client();
 
-client.on('ready', () => {
+module.exports = async (client) => {
     setInterval(() => {
         let warns;
         try {
-            warns = require('./warns.json');
+            warns = require('../warns.json');
         } catch (err) {
             warns = {};
-            fs.writeFileSync('./warns.json', '{}');
+            fs.writeFileSync('../warns.json', '{}');
         }
 
         for (const userId in warns) {
             if (warns[userId] >= 3) {
                 const member = client.guilds.cache.first().members.cache.get(userId);
+                if (!member) continue;
                 const muteRole = member.guild.roles.cache.find(role => role.name === 'Muted');
+                if (!muteRole) continue;
 
                 member.roles.add(muteRole);
 
@@ -28,12 +29,10 @@ client.on('ready', () => {
             }
         }
 
-        fs.writeFile('./warns.json', JSON.stringify(warns), err => {
+        fs.writeFile('../warns.json', JSON.stringify(warns), err => {
             if (err) {
                 console.error(err);
             }
         });
     }, ms('2m'));
-});
-
-client.login(config.token);
+};
