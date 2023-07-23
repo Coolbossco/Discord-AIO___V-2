@@ -75,6 +75,7 @@ const rl = readline.createInterface({
 
 rl.on('line', (input) => {
     if (input.toLowerCase() === 'refresh') {
+        console.clear(); // clear terminal
         console.log('Refreshing commands and events...');
         try {
             loadEvents();
