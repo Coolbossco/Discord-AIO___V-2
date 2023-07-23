@@ -5,7 +5,7 @@ A comprehensive Discord bot solution which covers moderation, ticket management 
 ## Installation
 
 1. Clone this repository:
-   `git clone https://github.com/yourusername/Discord-AIO.git`
+   `git clone https://github.com/Coolbossco/Discord-AIO.git`
 2. Enter the cloned repository:
 `cd Discord-AIO`
 3. Install the required dependencies:
