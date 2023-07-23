@@ -5,14 +5,15 @@
   "author": "Codegraph",
   "license": "MIT",
   "dependencies": {
+    "discord-backup": "^3.3.2",
     "discord.js": "12.5.1",
     "ms": "^2.1.3"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
   "keywords": [],
+  "devDependencies": {},
   "description": ""
 }
